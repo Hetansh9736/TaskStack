@@ -30,7 +30,7 @@ function Register() {
       }));
 
       reset();
-      navigate('/home');
+      navigate('/');
     } catch (err) {
       alert(err.message);
     }
@@ -39,7 +39,7 @@ function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center text-white px-4">
       <div className="bg-[#161b22] p-8 rounded-xl border border-[#30363d] shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-[#58a6ff] mb-6 text-center">Create an Account</h2>
+        <h2 className="text-2xl font-bold text-[#38bdf8] mb-6 text-center">Create an Account</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           
           <div>
@@ -80,7 +80,7 @@ function Register() {
 
           <button
             type="submit"
-            className="w-full bg-[#238636] hover:bg-[#2ea043] text-white py-2 px-4 rounded-md font-medium transition duration-200"
+            className="w-full bg-[#38bdf8] hover:bg-[#0ea5e9] text-white py-2 px-4 rounded-md font-medium transition duration-200"
           >
             Sign Up
           </button>

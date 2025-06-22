@@ -14,7 +14,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Logged in successfully!");
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       toast.error("Login failed: " + error.message);
     }
@@ -23,7 +23,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="bg-[#161b22] p-8 rounded-xl border border-[#30363d] shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold text-[#58a6ff] mb-6 text-center">Welcome back</h2>
+        <h2 className="text-2xl font-bold text-[#38bdf8] mb-6 text-center">Welcome back</h2>
         
         <form onSubmit={handleLogin} className="space-y-5">
           <div>
@@ -52,7 +52,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full bg-[#238636] hover:bg-[#2ea043] text-white py-2 px-4 rounded-md font-medium transition duration-200"
+            className="w-full bg-[#38bdf8] hover:bg-[#0ea5e9] text-white py-2 px-4 rounded-md font-medium transition duration-200"
           >
             Sign In
           </button>
