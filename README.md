@@ -1,13 +1,63 @@
-# React + Vite
+Taskstack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Taskstack** is a sleek, dark-themed blogging platform built with React, Firebase, Redux, and Tailwind CSS. It allows users to register, log in, create and browse posts. The UI is responsive and modern, following best practices for accessibility and design.
 
-Currently, two official plugins are available:
+Features
+- User authentication (Register, Login, Logout)
+- Create and publish posts
+- Real-time data with Firebase Firestore
+- Dark theme with Poppins font and Tailwind CSS styling
+- Smooth animations with Framer Motion
+- State management via Redux
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
+- **Frontend**: React, Tailwind CSS, Framer Motion
+- **Backend**: Firebase (Auth + Firestore)
+- **State Management**: Redux Toolkit
+- **Form Handling**: React Hook Form
+- **Notifications**: React Hot Toast
+- **Routing**: React Router
 
-## Expanding the ESLint configuration
+Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# TaskStack
+
+```bash
+1. Clone the Repository
+git clone https://github.com/your-username/taskstack.git
+cd taskstack
+
+2. Install Dependencies
+npm install
+
+3. Configure Firebase
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+4. Run the App
+npm run dev
+
+
+ Folder Structure
+src/
+├── Components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   └── ...
+├── Pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── CreatePost.jsx
+│   └── ...
+├── Redux/
+│   └── Slices/
+│       └── authSlice.js
+├── Helper/
+│   └── firebase.js
+└── App.jsx
