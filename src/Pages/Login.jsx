@@ -14,7 +14,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Logged in successfully!");
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       toast.error("Login failed: " + error.message);
     }
