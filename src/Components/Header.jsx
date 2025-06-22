@@ -24,14 +24,14 @@ export default function Header() {
   return (
     <header className="bg-[#0f172a] border-b border-[#1e293b] text-[#e2e8f0] px-4 py-3">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
-        <NavLink to="/" className="text-2xl font-bold text-white">
+        <NavLink to="/home" className="text-2xl font-bold text-white">
           Taskstack
         </NavLink>
 
         <nav className="flex gap-4 text-md font-medium">
           {user ? (
             <>
-              <NavLink to="/" className={linkClasses}>
+              <NavLink to="/home" className={linkClasses}>
                 Home
               </NavLink>
               <NavLink to="/createpost" className={linkClasses}>
@@ -46,7 +46,7 @@ export default function Header() {
             </>
           ) : (
             <>
-              <NavLink to="/login" className={linkClasses}>
+              <NavLink to="/" className={linkClasses}>
                 Login
               </NavLink>
               <NavLink to="/register" className={linkClasses}>
