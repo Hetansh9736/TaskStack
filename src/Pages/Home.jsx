@@ -8,7 +8,7 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { user } = useSelector((state) => state.auth);
-console.log(user)
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -62,7 +62,7 @@ console.log(user)
             >
               <h2 className="text-xl font-semibold text-[#f1f5f9] mb-2">{post.title}</h2>
               <p className="text-[#cbd5e1] text-sm mb-4">{post.content}</p>
-              <div className="text-[#94a3b8] text-xs mb-2">by {post.author}</div>
+              <div className="text-[#94a3b8] text-xs mb-2">by {post.author || "Anonymous"}</div>
               <div className="text-[#64748b] text-xs">
                 {post.createdAt ? new Date(post.createdAt).toLocaleString() : ''}
               </div>
@@ -70,9 +70,19 @@ console.log(user)
               {user?.uid === post.uid && (
                 <button
                   onClick={() => handleDelete(post.id)}
-                  className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 text-xs rounded hover:bg-red-600"
+                  className="absolute top-3 right-3 p-1 text-red-500 hover:text-red-600"
+                  aria-label="Delete post"
                 >
-                  Delete
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-5 h-5"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               )}
             </motion.div>
