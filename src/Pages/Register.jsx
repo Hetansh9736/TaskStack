@@ -30,7 +30,7 @@ function Register() {
       }));
 
       reset();
-      navigate('/');
+      navigate('/home');
     } catch (err) {
       alert(err.message);
     }
@@ -88,7 +88,7 @@ function Register() {
 
         <p className="text-sm text-[#8b949e] mt-5 text-center">
           Already have an account?{' '}
-          <Link to="/login" className="text-[#58a6ff] hover:underline">
+          <Link to="/" className="text-[#58a6ff] hover:underline">
             Login
           </Link>
         </p>
